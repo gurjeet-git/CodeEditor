@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:id="@+id/functions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/openFromDrive"
+            android:layout_width="90dp"
+            android:layout_height="37dp"
+            android:layout_weight="0.01"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:cropToPadding="true"
+            android:elevation="0dp"
+            android:scaleType="fitCenter"
+            android:text="Open"
+            app:srcCompat="@mipmap/openfile" />
+
+        <ImageButton
+            android:id="@+id/savetodrive"
+            android:layout_width="90dp"
+            android:layout_height="37dp"
+            android:layout_weight="0.01"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:cropToPadding="true"
+            android:elevation="0dp"
+            android:scaleType="fitCenter"
+            android:text="Save"
+            app:srcCompat="@mipmap/save" />
+
+        <ImageButton
+            android:id="@+id/buttonF"
+            android:layout_width="90dp"
+            android:layout_height="37dp"
+            android:layout_weight="0.01"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:cropToPadding="true"
+            android:elevation="0dp"
+            android:scaleType="fitCenter"
+            android:text="re-Color"
+            android:tooltipText="color code"
+
+            app:srcCompat="@mipmap/color" />
+
+        <ImageButton
+            android:id="@+id/email"
+            android:layout_width="90dp"
+            android:layout_height="37dp"
+            android:layout_weight="0.01"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:cropToPadding="true"
+            android:elevation="0dp"
+            android:onClick="mail_mailButton"
+            android:scaleType="fitCenter"
+            android:text="Share"
+            app:srcCompat="@mipmap/emailshare" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/functions"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainupperhalf"
+        android:layout_above="@id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:id="@+id/scrolling"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:id="@+id/upperhalf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/buttonlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <com.example.gurjeetsingh.testing.activities.MyEditText
+                    android:id="@+id/editText2"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="text|textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:text="@string/testCode"
+                    android:textColorLink="?android:attr/colorFocusedHighlight"
+                    android:textSize="50px" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
+

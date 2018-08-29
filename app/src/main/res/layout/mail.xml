@@ -33,6 +33,6 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="mail_mailButton"
+        android:onClick="shareCode"
         android:text="Button" />
 </LinearLayout>

@@ -33,15 +33,20 @@
 
     <Button
         android:id="@+id/sign_out_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Out" />
+        android:layout_width="68dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.07"
+        android:text="Sign Out"
+        android:textSize="9sp"/>
 
     <Button
         android:id="@+id/disconnect_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Disconnect" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:text="Disconnect"/>
 
     <TextView
         android:id="@+id/textView6"

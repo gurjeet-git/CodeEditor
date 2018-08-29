@@ -28,7 +28,7 @@
             android:elevation="0dp"
             android:scaleType="fitCenter"
             android:text="Open"
-            app:srcCompat="@mipmap/openfile" />
+            app:srcCompat="@drawable/ic_cloud_download_black_48dp"/>
 
         <ImageButton
             android:id="@+id/savetodrive"
@@ -41,22 +41,7 @@
             android:elevation="0dp"
             android:scaleType="fitCenter"
             android:text="Save"
-            app:srcCompat="@mipmap/save" />
-
-        <ImageButton
-            android:id="@+id/buttonF"
-            android:layout_width="90dp"
-            android:layout_height="37dp"
-            android:layout_weight="0.01"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:cropToPadding="true"
-            android:elevation="0dp"
-            android:scaleType="fitCenter"
-            android:text="re-Color"
-            android:tooltipText="color code"
-
-            app:srcCompat="@mipmap/color" />
+            app:srcCompat="@drawable/ic_cloud_upload_black_48dp"/>
 
         <ImageButton
             android:id="@+id/email"
@@ -67,10 +52,24 @@
             android:background="@color/white"
             android:cropToPadding="true"
             android:elevation="0dp"
-            android:onClick="mail_mailButton"
+            android:onClick="shareCode"
             android:scaleType="fitCenter"
             android:text="Share"
-            app:srcCompat="@mipmap/emailshare" />
+            app:srcCompat="@drawable/ic_share_black_48dp"/>
+
+        <ImageButton
+            android:id="@+id/exitApp"
+            android:layout_width="90dp"
+            android:layout_height="37dp"
+            android:layout_weight="0.01"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:cropToPadding="true"
+            android:elevation="0dp"
+            android:onClick="exitApp"
+            android:scaleType="fitCenter"
+            android:text="SignOut"
+            app:srcCompat="@drawable/ic_exit_to_app_black_48dp"/>
 
 
     </LinearLayout>
@@ -91,19 +90,19 @@
 
     <LinearLayout
         android:id="@+id/mainupperhalf"
-        android:layout_above="@id/middle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_above="@id/middle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <ScrollView
             android:id="@+id/scrolling"
-            android:fillViewport="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fillViewport="true"
             android:scrollbarStyle="outsideOverlay"
-            android:scrollbars="horizontal">
+            android:scrollbars="vertical">
 
             <LinearLayout
                 android:id="@+id/upperhalf"
@@ -111,27 +110,48 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <RelativeLayout
-                    android:id="@+id/buttonlayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
 
+                <com.example.gurjeetsingh.testing.activities.MyEditText
+                    android:id="@+id/LineNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+
+                    android:gravity="top"
+                    android:inputType="text|textMultiLine"
+                    android:text="@string/lineNumbers"
+                    android:textColor="@android:color/darker_gray"
+                    android:textColorLink="?android:attr/colorFocusedHighlight"
+                    android:textSize="50px"/>
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:background="@android:color/darker_gray" />
 
-                <com.example.gurjeetsingh.testing.activities.MyEditText
-                    android:id="@+id/editText2"
-                    android:gravity="top"
+                <RelativeLayout
+                    android:id="@+id/buttonlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/SCROLLER_ID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:inputType="text|textMultiLine"
-                    android:paddingLeft="20dp"
-                    android:text="@string/testCode"
-                    android:textColorLink="?android:attr/colorFocusedHighlight"
-                    android:textSize="50px" />
+                    android:fillViewport="true"
+                    android:scrollbars="horizontal">
+
+                    <com.example.gurjeetsingh.testing.activities.MyEditText
+                        android:id="@+id/editText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:inputType="text|textMultiLine"
+                        android:paddingLeft="20dp"
+                        android:text="@string/testCode"
+                        android:textColorLink="?android:attr/colorFocusedHighlight"
+                        android:textSize="50px" />
+                </HorizontalScrollView>
 
             </LinearLayout>
         </ScrollView>

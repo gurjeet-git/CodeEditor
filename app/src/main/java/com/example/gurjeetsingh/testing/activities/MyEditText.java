@@ -31,9 +31,11 @@ public class MyEditText extends android.support.v7.widget.AppCompatEditText {
     protected void onDraw(Canvas canvas) {
         int baseline = getBaseline();
         for (int i = 0; i < getLineCount(); i++) {
-            canvas.drawText((Integer.toString(i+1)), rect.width(), baseline, paint);
             baseline += getLineHeight();
+
+
         }
+       // canvas.
         super.onDraw(canvas);
     }
 
